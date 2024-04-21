@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Try-On</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/face-api.js"></script>
+</head>
+<body>
+    <div id="welcome">
+        <h1>Welcome to Adam's Virtual Try-On Experience</h1>
+        <button id="startBtn">Start Try-On</button>
+    </div>
+
+    <div id="methodSelection" style="display:none;">
+        <button id="uploadPhotoBtn">Upload a Photo</button>
+        <input type="file" id="photoInput" accept="image/*" style="display: none;">
+        <button id="liveCameraBtn">Live Camera</button>
+    </div>
+
+    <div id="makeupSelection" style="display:none;">
+        <button onclick="applyMakeup('lipstick')">Lipstick</button>
+        <button onclick="applyMakeup('eyeshadow')">Eyeshadow</button>
+    </div>
+
+    <video id="video" width="640" height="480" autoplay style="display: none;"></video>
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <script src="app.js"></script>
+</body>
+</html>
